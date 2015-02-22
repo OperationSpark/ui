@@ -1,0 +1,30 @@
+{
+  "name": "ui",
+  "version": "0.0.1",
+  "homepage": "https://github.com/OperationSpark/ui",
+  "authors": [
+    "John Fraboni <john@operationspark.org>"
+  ],
+  "description": "A simple ui library supporing the generation of ui controls from json",
+  "main": "ui.js",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "ui",
+    "json",
+    "input"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "lodash": "~3.3.0",
+    "jquery": "~2.1.3"
+  }
+}
