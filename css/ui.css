@@ -40,6 +40,10 @@ select, textarea {
     margin-bottom: 10px;
 }
 
+.back {
+    margin-top: 5px;
+}
+
 #controls{
     padding: 10px;
     background-color: rgba(25, 25, 25, 0.1);
@@ -48,7 +52,6 @@ select, textarea {
     margin-top: 10px;
     margin-left: 10px;
 }
-
 
 /* TODO : style all controls in css file */
 /*style="width: 200px; height: 20px; -webkit-appearance: slider-horizontal; writing-mode: bt-lr;">'*/

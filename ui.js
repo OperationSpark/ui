@@ -8,23 +8,23 @@
     };
     
     // TODO : Separate all style //
-    function makeControls(domId, values, settings, reset) {
+    function makeControls(values, settings, reset, formId, containerId) {
         _.where(settings, {'allowInput': true}).forEach(function (setting) {
             var id, controls, htmlLabel, htmlControl;
             
             id = setting.id;
-            controls = $(domId);
+            controls = $(formId || "#formControls");
             
             // TODO : Cleanup, standardize! //
             switch (setting.type) {
-                case 'range':
+                case "range":
                     htmlLabel = '<label id="label-' + id + '" for="' + id + '">' + setting.label + ' : ' + setting.value + '</label>';
                     htmlControl = '<input class="control slider" id="' + id + '" value="' + setting.value + '" step="' + setting.step + '" min="' + setting.min + '" max="' + setting.max + '" type="range" style="width: 200px; height: 20px; -webkit-appearance: slider-horizontal; writing-mode: bt-lr;">';
                     break;
-                case 'checkbox':
+                case "checkbox":
                     controls.append('<label id="label-' + id + '" class="checkbox-inline"><input class="control checkbox" id="' + id + '" value="' + setting.value + '" checked type="checkbox"><span>' + setting.label + ' : ' + (setting.value === 1 ? "on" : "off") + '</span></label>');
                     return;
-                case 'dropdown':
+                case "dropdown":
                     htmlLabel = '<label id="label-' + id + '" for="' + id + '">' + setting.label + ' : </label>';
                     htmlControl = $('<select class="select" id="' + id + '" style="width: 200px; height: 20px; writing-mode: bt-lr;">');
                     $(setting.options).each(function() {
@@ -33,7 +33,7 @@
                         htmlControl.append(option);
                     });
                     break;
-                case 'radio':
+                case "radio":
                     controls.append($('<label>').text(setting.label + ' : '));
                     $(setting.options).each(function() {
                         controls.append('<label id="label-' + id + '" class="radio-inline"><input type="radio" class="control radio" id="' + id + '" name="' + setting.id + '" value="' + this.value + '"' + (this.checked ? 'checked' : '') + '><span>' + this.text + '</span></label>');
@@ -91,7 +91,7 @@
         }
         
         if (window.location.href.match(/github.io|github-io/)) {
-            $("#controls").append( '<a class="a back btn btn-inverse" type="button">Back...</a>');
+            $(containerId || "#controls").append('<a class="a back btn btn-mini btn-primary" type="button">Back...</a>');
         }
         $(document).ready(function(){
             $('a.back').click(function(){
