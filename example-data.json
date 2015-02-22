@@ -7,11 +7,11 @@
         {"id": "degrees", "type": "range", "label": "degrees", "allowInput": true, "value": 1, "min": 0, "max": 360, "step": 1},
         {"id": "tail", "type": "range", "label": "tail", "allowInput": true, "value": 199, "min": 10, "max": 299, "step": 1, "requireRestart": true},
         
-        {"id": "whatever", "type": "dropdown", "label": "whatever", "allowInput": true, "value": "one", "requireRestart": true,
+        {"id": "whatever", "type": "dropdown", "label": "Whatever", "allowInput": true, "value": "one", "requireRestart": true,
             "options": [{"value":1, "text": "one"}, {"value":2, "text": "two", "selected": true}]
         },
         
-        {"id": "whoever", "label": "Whoever", "type": "radio", "allowInput": true,
+        {"id": "whoever", "type": "radio", "label": "Whoever", "allowInput": true,
             "options": [{"value":1, "text": "one"}, {"value":2, "text": "two", "checked": true}]
         },
         

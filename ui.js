@@ -8,7 +8,7 @@
     };
     
     // TODO : Separate all style //
-    function makeControls(values, settings, view, reset) {
+    function makeControls(values, settings, reset) {
         _.where(settings, {'allowInput': true}).forEach(function (setting) {
             var id, formControls, htmlLabel, htmlControl;
             
@@ -84,7 +84,7 @@
         function updateValueForId(id, value) {
             values[id] = value;
             
-            if (_.where(settings, {'id': id})[0].requireRestart) {
+            if (reset && _.where(settings, {'id': id})[0].requireRestart) {
                 reset();
             }
         }
