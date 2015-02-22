@@ -1,0 +1,25 @@
+{
+    "settings": [
+        {"id": "xSpeed", "type": "range", "label": "x speed", "allowInput": true, "value": 1.32, "min": 0.1, "max": 2.0, "step": 0.1},
+        {"id": "ySpeed", "type": "range", "label": "y speed", "allowInput": true, "value": 0.56, "min": 0.1, "max": 2.0, "step": 0.1},
+        {"id": "xAmplitude", "type": "range", "label": "x amplitude", "allowInput": true, "value": 200, "min": 50, "max": 300, "step": 1},
+        {"id": "yAmplitude", "type": "range", "label": "y Amplitude", "allowInput": true, "value": 200, "min": 50, "max": 300, "step": 1},
+        {"id": "degrees", "type": "range", "label": "degrees", "allowInput": true, "value": 1, "min": 0, "max": 360, "step": 1},
+        {"id": "tail", "type": "range", "label": "tail", "allowInput": true, "value": 199, "min": 10, "max": 299, "step": 1, "requireRestart": true},
+        
+        {"id": "whatever", "type": "dropdown", "label": "whatever", "allowInput": true, "value": "one", "requireRestart": true,
+            "options": [{"value":1, "text": "one"}, {"value":2, "text": "two", "selected": true}]
+        },
+        
+        {"id": "whoever", "label": "Whoever", "type": "radio", "allowInput": true,
+            "options": [{"value":1, "text": "one"}, {"value":2, "text": "two", "checked": true}]
+        },
+        
+        {"id": "applyScaleX", "type": "checkbox", "label": "apply x scale", "allowInput": true, "value": 1, "checked": true},
+        {"id": "applyScaleY", "type": "checkbox", "label": "apply y scale", "allowInput": true, "value": 1, "checked": true},
+        
+        {"id": "xAngle", "allowInput": false, "value": 0},
+        {"id": "yAngle", "allowInput": false, "value": 0},
+        {"id": "rotation", "allowInput": false, "value": 0},
+    ]
+}
